@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 from time import sleep
 
-"""ЗАПУСКАТЬ ПРИ ПОМОЩИ ФАЙЛА code.py"""
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.5.1027 Yowser/2.5 Safari/537.36'
@@ -26,7 +25,6 @@ def get_url():
         for link in data:
             card_url = 'https://scrapingclub.com' + link.find('a').get('href')
             yield card_url
-
 
 def scraping():
     """Проходим по каждой ссылке на карточку"""
